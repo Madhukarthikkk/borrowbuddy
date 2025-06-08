@@ -1,5 +1,5 @@
 # borrowbuddy
-BorrowBuddy is a website where people can rent items from each other. If someone has something they are not using—like a camera, bicycle, or books—they can post it on this site for others to borrow. And if someone needs an item for a short time, they can search and rent it instead of buying a new one.
+BorrowBuddy is a website where people can rent items from each other. If someone has something they are not using—like a camera,tents,electronics or bicycle —they can post it on this site for others to borrow. And if someone needs an item for a short time, they can search and rent it instead of buying a new one.
 
 This platform is built using Flask, a tool that helps us make websites using Python. We also used SQLite to store user data and product details. Users can sign up by entering their username, email, and password. Once logged in, they can see available items listed for rent. They can also add their own items to the site by filling out a form with the title, description, image, and price.
 

@@ -6,14 +6,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///products.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# Models
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
     description = db.Column(db.String(200))
     price = db.Column(db.Float)
     image_url = db.Column(db.String(300))
-    status = db.Column(db.String(20))  # 'on_sale' or 'sold'
+    status = db.Column(db.String(20))  
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -22,10 +21,9 @@ class User(db.Model):
     password = db.Column(db.String(120), nullable=False)
 
 with app.app_context():
-    db.drop_all()      # Drop all tables (careful: this deletes existing data)
-    db.create_all()    # Recreate tables with new schema
+    db.drop_all()      
+    db.create_all()    
 
-# Routes
 @app.route('/')
 def index():
     return render_template('index.html')
